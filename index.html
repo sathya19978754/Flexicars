@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexiCars - Premium Car Rental Service</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-car-side me-2"></i>FlexiCar
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cars.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#" title="Search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a class="nav-link" href="#" title="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <a class="nav-link" href="#" title="Profile">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">Find Your Perfect Ride</h1>
+                    <p class="hero-subtitle mb-5">Experience premium car rental with FlexiCars. Choose from our wide range of vehicles for any occasion.</p>
+                    
+                    <!-- Car Features -->
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <h6 class="feature-title">Transmission</h6>
+                                <p class="feature-type">Manual</p>
+                                <p class="feature-desc">Manual Transmission gives you full control over gear shifts, ideal for performance driving.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <h6 class="feature-title">Energy Mode</h6>
+                                <p class="feature-type">Petrol</p>
+                                <p class="feature-desc">Petrol engines deliver smooth, quiet performance with quick acceleration.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h6 class="feature-title">Seating Capacity</h6>
+                                <p class="feature-type">5 Adults</p>
+                                <p class="feature-desc">Comfortably seats up to 5 passengers, perfect for families or small groups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="car-display">
+                            <img src="assets/images/maybach-sl-680-exterior-right-front-three-quarter 1.png" alt="Premium Car" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section py-5">
+        <div class="container">
+            <div class="search-form-container">
+                <form class="search-form">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Departure</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                <input type="text" class="form-control" value="Coimbatore, Tirupur" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Return Location</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                <input type="text" class="form-control" value="Coimbatore, Tirupur" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Pickup Date Time</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                <input type="text" class="form-control" value="01. May, 2025 12:00PM" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Return Date Time</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                <input type="text" class="form-control" value="05.May, 2025 11:00PM" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Brands Section -->
+    <section class="brands-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Explore Trusted Car Brands</h2>
+                <p class="section-subtitle">Rides you know, Brands you trust.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="brand-card">
+                        <div class="brand-image">
+                            <img src="assets/images/image 26.png" alt="BMW" class="img-fluid">
+                        </div>
+                        <div class="brand-logo">
+                            <span class="brand-text">BMW</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="brand-card">
+                        <div class="brand-image">
+                            <img src="assets/images/Frame 427319109.png" alt="Audi" class="img-fluid">
+                        </div>
+                        <div class="brand-logo">
+                            <span class="brand-text">AUDI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="brand-card">
+                        <div class="brand-image">
+                            <img src="assets/images/image 30.png" alt="Mercedes" class="img-fluid">
+                        </div>
+                        <div class="brand-logo">
+                            <span class="brand-text">MERCEDES</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="brand-card">
+                        <div class="brand-image">
+                            <img src="assets/images/image 39.png" alt="Hyundai" class="img-fluid">
+                        </div>
+                        <div class="brand-logo">
+                            <span class="brand-text">HYUNDAI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="brand-card">
+                        <div class="brand-image">
+                            <img src="assets/images/image 55.png" alt="Land Rover" class="img-fluid">
+                        </div>
+                        <div class="brand-logo">
+                            <span class="brand-text">LAND ROVER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Categories Section -->
+    <section class="categories-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Drive the Way You Want</h2>
+                <p class="section-subtitle">Your ride, your style.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/swift-right-front-three-quarter 2.png" alt="Saloon" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Saloon</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/tiguan-r-line-right-front-three-quarter 1.png" alt="SUV" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">SUV</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/land-rover-defender-right-front-three-quarter28 1.png" alt="Van" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Van</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/Rectangle-1.png" alt="Pickup" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Pickup</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/ev6-right-front-three-quarter 1.png" alt="Sports" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Sports</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/kylaq-right-front-three-quarter 1.png" alt="Sports Car" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Sports Car</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/gla-facelift-exterior-right-front-three-quarter-3 1.png" alt="Hatchback" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Hatchback</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="assets/images/q3-exterior-right-front-three-quarter-93480 1.png" alt="Convertible" class="img-fluid">
+                        </div>
+                        <h5 class="category-title">Convertible</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cars Section -->
+    <section class="popular-cars-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Most Popular Rides</h2>
+                <p class="section-subtitle">Top cars, top experiences.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="assets/images/Frame 427319107.png" alt="Toyota Fortuner 2023" class="img-fluid">
+                        </div>
+                        <div class="car-details">
+                            <h5 class="car-name">Toyota Fortuner 2023</h5>
+                            <div class="car-price">
+                                <span class="price">1,800</span>
+                                <span class="period">/day</span>
+                            </div>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>4000</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Manual</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>7 Person</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Electric</span>
+                                </div>
+                            </div>
+                            <div class="car-rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-value">4.7</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="assets/images/image 28.png" alt="Nissan Maxima Platinum 2024" class="img-fluid">
+                        </div>
+                        <div class="car-details">
+                            <h5 class="car-name">Nissan Maxima Platinum 2024</h5>
+                            <div class="car-price">
+                                <span class="price">2,300</span>
+                                <span class="period">/day</span>
+                            </div>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>6000</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Auto</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>4 Person</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Electric</span>
+                                </div>
+                            </div>
+                            <div class="car-rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-value">4.9</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="assets/images/image 29.png"alt="Skoda Kodiaq Platinum 2025" class="img-fluid">
+                        </div>
+                        <div class="car-details">
+                            <h5 class="car-name">Skoda Kodiaq Platinum 2025</h5>
+                            <div class="car-price">
+                                <span class="price">1,800</span>
+                                <span class="period">/day</span>
+                            </div>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>5000</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Auto</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>4 Person</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Electric</span>
+                                </div>
+                            </div>
+                            <div class="car-rating">
+                                <span class="rating-star">★</span>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Popular Cars. Ready to Drive</h2>
+                <p class="section-subtitle">These cars are in demand don't wait, book today!</p>
+            </div>
+            
+            <!-- Audi Q7 -->
+            <div class="featured-car mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="featured-car-content">
+                            <h3 class="featured-car-title">Audi Q7</h3>
+                            <p class="featured-car-subtitle">Command Attention, Drive Prestige.</p>
+                            <p class="featured-car-description">
+                                The Audi Q7 is where power meets elegance. With bold design, advanced technology, and the confidence of quattro all-wheel drive, it offers a driving experience that's both luxurious and thrilling. Spacious, sophisticated, and unmistakably Audi—this is the SUV that redefines what it means to arrive.
+                            </p>
+                            <button class="btn btn-primary">Explore</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="featured-car-images">
+                            <div class="main-image">
+                                <img src="assets/images/Frame 427319046.png" alt="Audi Q7" class="img-fluid">
+                            </div>
+                            <div class="detail-images">
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319072.png" alt="Audi Wheel" class="img-fluid">
+                                </div>
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319048.png" alt="Audi Interior" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- BMW M2 -->
+            <div class="featured-car mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="featured-car-content">
+                            <h3 class="featured-car-title">BMW M2</h3>
+                            <p class="featured-car-subtitle">Pure Power, Perfect Control.</p>
+                            <p class="featured-car-description">
+                                The new BMW M2 is a compact powerhouse built for purists. With a turbocharged inline-6 engine, rear-wheel drive, and aggressive M styling, it delivers raw performance and precise handling in every turn. From the track to the street, the M2 is engineered for those who crave the ultimate driving thrill—without compromise.
+                            </p>
+                            <button class="btn btn-primary">Explore</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="featured-car-images">
+                            <div class="main-image">
+                                <img src="assets/images/Frame 427319065.png" alt="BMW M2" class="img-fluid">
+                            </div>
+                            <div class="detail-images">
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319068.png" alt="BMW Logo" class="img-fluid">
+                                </div>
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319067.png" alt="BMW Wheel" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MINI Cooper -->
+            <div class="featured-car mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="featured-car-content">
+                            <h3 class="featured-car-title">MINI Cooper</h3>
+                            <p class="featured-car-subtitle">Iconic Style, Electrifying Spirit.</p>
+                            <p class="featured-car-description">
+                                The 2025 MINI Cooper blends classic charm with cutting-edge innovation. With its unmistakable design, responsive handling, and advanced digital cockpit, it's more than a car—it's an attitude. Whether you're zipping through city streets or hitting the open road, the new MINI delivers big fun in a compact package.
+                            </p>
+                            <button class="btn btn-primary">Explore</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="featured-car-images">
+                            <div class="main-image">
+                                <img src="assets/images/Frame 427319073.png" alt="MINI Cooper" class="img-fluid">
+                            </div>
+                            <div class="detail-images">
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319071.png" alt="MINI Interior" class="img-fluid">
+                                </div>
+                                <div class="detail-image">
+                                    <img src="assets/images/Frame 427319070.png" alt="MINI Dashboard" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logos Section -->
+    <section class="brand-logos-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <i class="fab fa-audi"></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>Jeep</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>O</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>D</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>R</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>C</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>★</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>H</span>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-logo-item">
+                        <span>LAND ROVER</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Trusted by Drivers Everywhere.</p>
+            </div>
+            
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"I rented a BMW for a weekend road trip, and the whole process was seamless. The car was in perfect condition, and I'll definitely rent again."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">
+                                            <img src="assets/images/Ellipse 3.png" alt="Raveena" class="img-fluid">
+                                        </div>
+                                        <div class="author-info">
+                                            <h6 class="author-name">Raveena</h6>
+                                            <div class="author-rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"The MINI Cooper I rented was the perfect city car—fun and easy to park. Great experience from start to finish!"</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">
+                                            <img src="assets/images/Ellipse 2.png" alt="Agatya" class="img-fluid">
+                                        </div>
+                                        <div class="author-info">
+                                            <h6 class="author-name">Agatya</h6>
+                                            <div class="author-rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-content">
+                                        <p>"Adorable wholesale toy shop with high quality independently made bike and more toys. Very friendly staff as well. A must stop with little ones when in Bath."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">
+                                            <img src="assets/images/Ellipse 1.png" alt="Muthu Ravi" class="img-fluid">
+                                        </div>
+                                        <div class="author-info">
+                                            <h6 class="author-name">Muthu Ravi</h6>
+                                            <div class="author-rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">KNOW</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">About FlexiCar</a></li>
+                        <li><a href="#">Bulk Order & Booking Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">TERMS & CONDITIONS</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Delivery & Return Policies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">CONTACT US</h6>
+                    <ul class="footer-links">
+                        <li>For Sale: FlexiCar@co.in</li>
+                        <li>Call: +91 1234567890</li>
+                        <li>For Complaints: 1800 2421 2421</li>
+                        <li>Chat Time: Our Team is Available</li>
+                        <li>From Monday to Saturday from</li>
+                        <li>9.00AM to 8.00PM</li>
+                        <li>For Complaints: Flexicc.com</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">DOWNLOAD APP</h6>
+                    <div class="app-downloads mb-3">
+                        <a href="#" class="app-download-link">
+                            <img src="assets/images/Frame 427319046.png" alt="Download on App Store" class="img-fluid mb-2" style="max-height: 40px;">
+                        </a>
+                        <a href="#" class="app-download-link">
+                            <img src="assets/images/Frame 427319048.png" alt="Get it on Google Play" class="img-fluid" style="max-height: 40px;">
+                        </a>
+                    </div>
+                    
+                    <h6 class="footer-heading">FOLLOW US</h6>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <p class="copyright">Copyright © 2025 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
